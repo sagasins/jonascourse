@@ -1,0 +1,48 @@
+<html><head><title>A Simple Form</title></head>
+<body>
+<h1>Jonas Objects</h1>
+
+<script type= "text/javascript">
+	// creating objects//
+
+	var John = {
+		fullname: 'John Kirk', 
+		weight: 70, 
+		height: 1.8,
+		calcBMI: function(){
+			this.bmi = this.weight / (this.height * this.height);
+			return this.bmi;
+		}
+	}
+
+	var Mark = {
+		fullname: 'Mark Twain', 
+		weight: 90,
+		height: 1.82,
+		calcBMI: function(){
+			this.bmi = this.weight / (this.height * this.height);
+			return this.bmi;
+		}
+	}
+
+	//highest BMI//
+
+	function theheighest(){
+		if (John.calcBMI() > Mark.calcBMI()) {
+			console.log("The heighest BMI has" + John.fullname);
+		}
+		else if (John.calcBMI() < Mark.calcBMI()) {
+			console.log("The heighest BMI has" + Mark.fullname);
+		}
+		else {
+			console.log("Their BMIs is the same");
+		}
+		 	} 
+
+	console.log(theheighest());
+
+
+</script>
+
+</body>
+</html>
